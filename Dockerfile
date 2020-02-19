@@ -12,6 +12,6 @@ RUN chmod -R 777 ~/zfile/bin \
     && sed -i "1c #!/bin/sh" zfile/bin/*.sh \
     && echo "tail -f /dev/null" >> zfile/bin/start.sh \
     && echo "tail -f /dev/null" >> zfile/bin/restart.sh 
-VOLUME [ "~/.zfile/db/" ]
+VOLUME [ "~/.zfile/" ]
 EXPOSE 8080
 ENTRYPOINT ["/root/zfile/bin/start.sh"]
