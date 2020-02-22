@@ -5,7 +5,7 @@
 docker run -d \
 -p 8080:8080  \
 -v /root/zfile/:/root/.zfile/  \
-pcbcos/zfile:1.6
+pcbcos/zfile:[tag]
 ```
 # 持久化  
 `/root/zfile/`:内有缓存和日志
