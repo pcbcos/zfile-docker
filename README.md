@@ -4,7 +4,7 @@
 ``` 
 docker run -d \
 -p 8080:8080  \
--v /root/zfile_log/:/root/.zfile/logs/  \
+-v /root/zfile_logs/:/root/.zfile/logs/  \
 pcbcos/zfile:[tag]
 ```
 # 持久化  
