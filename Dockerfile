@@ -1,7 +1,7 @@
 FROM alpine
 WORKDIR /root
 RUN apk update && apk add tzdata openjdk8 unzip \
-    && wget -P ~ https://github.com/zhaojun1998/zfile/releases/download/1.8/zfile-1.8.war
+    && wget -P ~ https://zfilebuild.oss-cn-hangzhou.aliyuncs.com/zfile-1.8.war
 RUN cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
     && echo "Asia/Shanghai" > /etc/timezone \
     && apk del tzdata \ 
