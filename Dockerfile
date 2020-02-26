@@ -1,13 +1,13 @@
 FROM alpine
 WORKDIR /root
 RUN apk update && apk add tzdata openjdk8 unzip \
-    && wget -P ~ https://zfilebuild.oss-cn-hangzhou.aliyuncs.com/zfile-1.8.war
+    && wget -P ~ https://github.com/zhaojun1998/zfile/releases/download/1.9/zfile-1.9.war
 RUN cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
     && echo "Asia/Shanghai" > /etc/timezone \
     && apk del tzdata \ 
     && mkdir zfile \
-    && unzip zfile-1.8.war -d zfile \
-    && rm -rf zfile-1.8.war
+    && unzip zfile-1.9.war -d zfile \
+    && rm -rf zfile-1.9.war
 RUN chmod -R 777 ~/zfile/bin \
     && sed -i "1c #!/bin/sh" zfile/bin/*.sh \
     && echo "tail -f /dev/null" >> zfile/bin/start.sh \
