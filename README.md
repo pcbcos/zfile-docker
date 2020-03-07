@@ -4,9 +4,8 @@
 ``` 
 docker run -d \
 -p 8080:8080  \
--v /root/zfile_logs/:/root/.zfile/logs/  \
+-v /root/zfile/:/root/.zfile/ \
 pcbcos/zfile:[tag]
 ```
 # 持久化  
-`/root/zfile_logs/`:内有日志  
-因每次更新都要删缓存，故不添加缓存的持久化
+`/root/zfile/`:内有日志和缓存
